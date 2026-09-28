@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TSURANE(つらね)</title>
+<meta name="description" content="PC で育てたキャラクターを、スマートフォンに連れて出かけるアプリ TSURANE(つらね)。">
+<style>
+  :root { --bg: #fbfbfd; --fg: #1d1f24; --muted: #5b616e; --line: #d9dce3; --head: #f0f2f6; --link: #1f5fd1; --nav: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111318; --fg: #e3e6ec; --muted: #9aa1ad; --line: #2c313b; --head: #1b1f27; --link: #8ab4ff; --nav: #161a21; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+    font-size: 16px; line-height: 1.75; }
+  header { background: var(--nav); border-bottom: 1px solid var(--line); }
+  nav { max-width: 760px; margin: 0 auto; padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
+  nav a { color: var(--fg); text-decoration: none; }
+  nav a[aria-current="page"] { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+  .legal h2 { font-size: 24px; line-height: 1.4; margin: 8px 0 16px; }
+  .legal h3 { font-size: 19px; margin: 32px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  .legal h4 { font-size: 16px; margin: 22px 0 6px; }
+  .legal p { margin: 0 0 12px; }
+  .legal ul { margin: 0 0 12px; padding-left: 22px; }
+  .legal li { margin: 4px 0; }
+  .legal table { border-collapse: collapse; width: 100%; margin: 0 0 16px; font-size: 14px; table-layout: fixed; }
+  .legal th, .legal td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .legal th { background: var(--head); font-weight: 600; }
+  .legal a { color: var(--link); overflow-wrap: anywhere; }
+  .legal hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<header><nav><a href="index.html" aria-current="page">TSURANE</a><a href="privacy.html">プライバシーポリシー</a><a href="support.html">サポート</a></nav></header>
+<main class="legal"><h2>TSURANE(つらね)</h2>
+<p>PC で育てたキャラクターを、スマートフォンに連れて出かけるアプリです。スマートフォンだけでキャラクターを迎えて、話すこともできます。</p>
+<p>キャラクターは、話した言葉やいっしょに過ごした時間を覚えていて、少しずつ関係が変わっていきます。キャラクターは同時に一か所にしかいません。スマートフォンに連れて出かけている間、PC の家は留守になり、帰ってくると、出かけた先のことも覚えています。</p>
+<h3>手に入れる</h3>
+<ul><li>PC 版(Windows 11): <a href="https://github.com/tanukimaru44/tsurane-releases/releases" target="_blank" rel="noopener">https://github.com/tanukimaru44/tsurane-releases/releases</a></li><li>iPhone 版: App Store(準備中)</li></ul>
+<p>どちらも、AI サービス(OpenRouter または OpenAI)の、あなた自身の API キーを使います。</p>
+<h3>大切にしていること</h3>
+<ul><li>開発者のサーバーはありません。キャラクターの記憶と会話は、あなたの端末の中に保存されます</li><li>返事を作るために送る内容と送り先は、使い始める前にお知らせして、同意をいただいてから送ります</li><li>13 歳以上の方が対象です</li></ul>
+<hr>
+<h3>About (English)</h3>
+<p>TSURANE is a character-conversation app for Windows 11 PCs and iPhone. Take the character you raised on your PC out with you on your phone, or welcome a character on your phone alone. The character remembers your conversations, and it is only ever in one place at a time: while it is out with you on your phone, its home on the PC is empty, and when it comes back it remembers the trip. Both versions use your own API key for an AI provider (OpenRouter or OpenAI). There is no developer server; the character&#39;s memory stays on your device. The screens are in Japanese.</p></main>
+<footer>TSURANE — <a href="index.html">TSURANE</a><a href="privacy.html">プライバシーポリシー</a><a href="support.html">サポート</a></footer>
+</body>
+</html>
