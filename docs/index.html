@@ -31,6 +31,15 @@
   .legal th { background: var(--head); font-weight: 600; }
   .legal a { color: var(--link); overflow-wrap: anywhere; }
   .legal hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+  /* 狭い画面では表を行ごとの枠にする(2026-10-18。アプリの中の表示と同じ形。列名は td の data-label) */
+  @media (max-width: 600px) {
+    .legal table, .legal tbody, .legal tr, .legal td { display: block; width: auto; }
+    .legal thead { display: none; }
+    .legal tr { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; margin: 0 0 10px; }
+    .legal td { border: 0; padding: 2px 0; }
+    .legal td:first-child { font-weight: 600; }
+    .legal td + td::before { content: attr(data-label) ": "; color: var(--muted); }
+  }
   footer { max-width: 760px; margin: 0 auto; padding: 0 16px 32px; color: var(--muted); font-size: 13px; }
   footer a { color: var(--muted); }
 </style>
@@ -42,12 +51,12 @@
 <p>キャラクターは、話した言葉やいっしょに過ごした時間を覚えていて、少しずつ関係が変わっていきます。キャラクターは同時に一か所にしかいません。スマートフォンに連れて出かけている間、PC の家は留守になり、帰ってくると、出かけた先のことも覚えています。</p>
 <h3>手に入れる</h3>
 <ul><li>PC 版(Windows 11): <a href="https://github.com/tanukimaru44/tsurane-releases/releases" target="_blank" rel="noopener">https://github.com/tanukimaru44/tsurane-releases/releases</a></li><li>iPhone 版: App Store(準備中)</li></ul>
-<p>どちらも、AI サービス(OpenRouter または OpenAI)の、あなた自身の API キーを使います。</p>
+<p>どちらも、OpenRouter の、あなた自身の API キーを使います(PC 版は OpenAI も選べます)。</p>
 <h3>記録と送信について</h3>
 <ul><li>開発者のサーバーはありません。キャラクターの記憶と会話は、あなたの端末の中に保存されます。</li><li>返事を作るために送る内容と送り先は、使い始める前にお知らせし、同意を得てから送ります。</li><li>13 歳以上の方が対象です。</li></ul>
 <hr>
 <h3>About (English)</h3>
-<p>TSURANE is a character-conversation app for Windows 11 PCs and iPhone. Take the character you raised on your PC out with you on your phone, or welcome a character on your phone alone. The character remembers your conversations, and it is only ever in one place at a time: while it is out with you on your phone, its home on the PC is empty, and when it comes back it remembers the trip. Both versions use your own API key for an AI provider (OpenRouter or OpenAI). There is no developer server; the character&#39;s memory stays on your device. The screens are in Japanese.</p></main>
+<p>TSURANE is a character-conversation app for Windows 11 PCs and iPhone. Take the character you raised on your PC out with you on your phone, or welcome a character on your phone alone. The character remembers your conversations, and it is only ever in one place at a time: while it is out with you on your phone, its home on the PC is empty, and when it comes back it remembers the trip. Both versions use your own API key for an AI provider (OpenRouter; the PC version can also use OpenAI). There is no developer server; the character&#39;s memory stays on your device. The screens are in Japanese.</p></main>
 <footer>TSURANE — <a href="index.html">TSURANE</a><a href="privacy.html">プライバシーポリシー</a><a href="support.html">サポート</a></footer>
 </body>
 </html>

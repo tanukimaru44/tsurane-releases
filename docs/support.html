@@ -31,6 +31,15 @@
   .legal th { background: var(--head); font-weight: 600; }
   .legal a { color: var(--link); overflow-wrap: anywhere; }
   .legal hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+  /* 狭い画面では表を行ごとの枠にする(2026-10-18。アプリの中の表示と同じ形。列名は td の data-label) */
+  @media (max-width: 600px) {
+    .legal table, .legal tbody, .legal tr, .legal td { display: block; width: auto; }
+    .legal thead { display: none; }
+    .legal tr { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; margin: 0 0 10px; }
+    .legal td { border: 0; padding: 2px 0; }
+    .legal td:first-child { font-weight: 600; }
+    .legal td + td::before { content: attr(data-label) ": "; color: var(--muted); }
+  }
   footer { max-width: 760px; margin: 0 auto; padding: 0 16px 32px; color: var(--muted); font-size: 13px; }
   footer a { color: var(--muted); }
 </style>
@@ -40,10 +49,10 @@
 <main class="legal"><h2>TSURANE サポート</h2>
 <p>TSURANE(つらね)は、PC とスマートフォンで動く、キャラクターと話すアプリです。PC で育てたキャラクターをスマートフォンに連れて出かけられます。スマートフォンだけでキャラクターを迎えて、話すこともできます。</p>
 <h3>動作環境</h3>
-<ul><li>スマートフォン版: iPhone(iOS 15 以降)</li><li>PC 版: Windows 11</li><li>どちらも、AI サービス(OpenRouter または OpenAI)の API キーが必要です。キーはあなた自身のものを使います。AI サービスの利用料は、各社からあなたに請求されます。</li></ul>
+<ul><li>スマートフォン版: iPhone(iOS 15 以降)</li><li>PC 版: Windows 11</li><li>どちらも、OpenRouter の API キーが必要です(PC 版は OpenAI も選べます)。キーはあなた自身のものを使います。AI サービスの利用料は、各社からあなたに請求されます。</li></ul>
 <h3>よくある質問</h3>
 <h4>キーの画面には何を入れればいいですか</h4>
-<p>接続先(OpenRouter か OpenAI)を選び、その会社で作った API キーを貼り付けてください。モデルの欄は空欄のままで構いません(既定のものを使います)。PC から連れて来たキャラクターは、PC の設定をそのまま使います。</p>
+<p>OpenRouter で作った API キーを貼り付けてください。モデルは「標準(おすすめ)」のままで構いません。PC から連れて来たキャラクターは、PC の設定をそのまま使います。</p>
 <h4>「AI サービスのキーが使えませんでした」と出ます</h4>
 <p>キーが無効になったか、打ち間違いかもしれません。「設定」の「AI サービスのキーを変える」から、キーを入れ直してください。</p>
 <h4>「AI サービスの残高か、使える回数の上限に達したようです」と出ます</h4>
@@ -63,7 +72,7 @@
 <hr>
 <h3>Support (English summary)</h3>
 <p>TSURANE is a character-conversation app for Windows 11 PCs and iPhone (iOS 15 or later). You can take a character you raised on your PC out with you on your phone, or welcome a character on your phone alone. The screens are in Japanese.</p>
-<ul><li>Both versions need your own API key for an AI provider (OpenRouter or OpenAI). The provider bills you directly for AI usage.</li><li>To move a character from your PC to your phone, connect both to the same Wi-Fi, open &quot;スマホへ&quot; (To phone) from the TSURANE menu on the PC and press &quot;連れて行く&quot; (Take along), then choose &quot;PC のキャラクターを迎える&quot; (Welcome a character from the PC) on the phone and scan the QR code.</li><li>On the phone, the character&#39;s memory and conversation history stay on the device and are not included in backups such as iCloud. To delete them, open Settings &gt; &quot;このアプリについて&quot; (About this app) &gt; &quot;記録を全部消す&quot; (Erase all records).</li><li>The app is intended for users aged 13 and over.</li><li>Contact: turane.support@gmail.com</li></ul></main>
+<ul><li>Both versions need your own API key for an AI provider (OpenRouter; the PC version can also use OpenAI). The provider bills you directly for AI usage.</li><li>To move a character from your PC to your phone, connect both to the same Wi-Fi, open &quot;スマホへ&quot; (To phone) from the TSURANE menu on the PC and press &quot;連れて行く&quot; (Take along), then choose &quot;PC のキャラクターを迎える&quot; (Welcome a character from the PC) on the phone and scan the QR code.</li><li>On the phone, the character&#39;s memory and conversation history stay on the device and are not included in backups such as iCloud. To delete them, open Settings &gt; &quot;このアプリについて&quot; (About this app) &gt; &quot;記録を全部消す&quot; (Erase all records).</li><li>The app is intended for users aged 13 and over.</li><li>Contact: turane.support@gmail.com</li></ul></main>
 <footer>TSURANE — <a href="index.html">TSURANE</a><a href="privacy.html">プライバシーポリシー</a><a href="support.html">サポート</a></footer>
 </body>
 </html>
